@@ -1,0 +1,17 @@
+TL;DR {thing} is a terrible anti-pattern that violates all principles of object-oriented programming, tearing objects apart and turning them into dumb and passive data bags.
+There is no excuse for {thing} existence in any application, be it a small web app or an enterprise-size system with thousands of tables and CRUD manipulations on them.
+It’s a standard de-facto and still I’m saying that it’s wrong? Yes.
+I’m claiming that the entire idea behind {thing} is wrong.
+Its invention was maybe the second big mistake in OOP after NULL reference.
+However, my argument is different than what they’re saying.
+Even though their reasons are practical and valid, like “{thing} is slow” or “database upgrades are hard,” they miss the main point.
+Because of this terrible and offensive violation of the object-oriented paradigm, we have a lot of practical issues already mentioned in respected publications.
+I can only add a few more.
+When some object is working with a list of posts, it needs to deal with an instance of SessionFactory.
+How can we mock this dependency?
+We have to create a mock of it?
+How complex is this task?
+Look at the code above, and you will realize how verbose and cumbersome that unit test will be.
+Again, let me reiterate.
+Practical problems of {thing} are just consequences.
+The fundamental drawback is that {thing} tears objects apart, terribly and offensively violating the very idea of what an object is.

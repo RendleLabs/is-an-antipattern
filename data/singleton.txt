@@ -1,0 +1,9 @@
+There’s a horrible disease out there, and a lot of programmers – both junior and senior – are affected by it: {thing}itis.
+Please, let’s help stopping the plague from spreading further by reading and understanding this post.
+What is {thing}itis?
+It is something that’s both bad for your code’s health, and bad for your own and your co-workers sanity.
+We will get to simple, easy-to-understand examples and counter-examples of {thing}itis gone bad in a minute.
+When I talk about {thing}itis, I’m speaking of codebases that are so heavily infected with {thing}s, that their count is already in the high twenties – if you’re working on such a thing, I feel sorry for you.
+If you’re an experienced developer and teach inexperienced programmers how to put in even more of the damn things without giving them an alternative, go and hide in a corner, now!
+So why are {thing}s bad, exactly?
+Rather than coming up with things that have already been said elsewhere, I’d like to give concrete examples of where a {thing} was clearly the wrong choice, and what the alternatives would have been.

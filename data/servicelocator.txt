@@ -1,0 +1,13 @@
+ {thing} is a well-known pattern, and since it was described by Martin Fowler, it must be good, right?
+No, it's actually an anti-pattern and should be avoided. 
+Let's examine why this is so.
+In short, the problem with {thing} is that it hides a class' dependencies, causing run-time errors instead of compile-time errors, as well as making the code more difficult to maintain because it becomes unclear when you would be introducing a breaking change. 
+While this use of {thing} is problematic from the consumer's point of view, what seems easy soon becomes an issue for the maintenance developer as well. 
+ Was this a breaking change?
+This can be surprisingly hard to answer.
+It certainly compiled fine, but broke one of my unit tests.
+What happens in a production application?
+The bottom line is that it becomes a lot harder to tell whether you are introducing a breaking change or not.
+You need to understand the entire application in which the {thing} is being used, and the compiler is not going to help you. 
+The problem with using a {thing} isn't that you take a dependency on a particular {thing} implementation (although that may be a problem as well), but that it's a bona-fide anti-pattern.
+It will give consumers of your API a horrible developer experience, and it will make your life as a maintenance developer worse because you will need to use considerable amounts of brain power to grasp the implications of every change you make. 

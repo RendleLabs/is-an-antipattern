@@ -1,0 +1,8 @@
+The user initiates a navigation, and the browser gets busy: it'll likely have to resolve a dozen DNS names, establish an even larger number of connections, and then dispatch one or more requests over each.
+In turn, for each request, it often does not know the response size (chunked transfers), and even when it does, it is still unable to reliably predict the download time due to variable network weather, server processing times, and so on.
+Finally, fetching and processing one resource might trigger an entire subtree of new requests.
+
+Ok, so loading a page is complicated business, so what?
+Well, if there is no way to reliably predict how long the load might take, then why do so many browsers still use and show the {thing}?
+At best, the {thing} is a lie that misleads the user; worse, the success criteria is forcing developers to optimize for "onload time", which misses the progressive rendering experience that modern applications are aiming to deliver.
+{thing}s fail both the users and the developers; we can and should do better.

@@ -1,0 +1,5 @@
+Lately it's become fashionable to create repositories that delegate to {thing} in an attempt to decouple the consuming code, while still getting some of the other {thing} productivity benefits.
+This breaks down really badly when you need to work with relationships.
+This is fundamental to how {thing} works.
+This is a fundamentally flawed, leaky abstraction.
+For this reason alone, I consider an {thing}-backed repository to be the worst of both worlds, not a convenient middleground.

@@ -1,0 +1,4 @@
+{thing} is, as Arbuthnot Fink calls it, our industry’s Grand Failure.
+A good domain model is not a data model.
+A domain model describes behaviour, and the data is an artefact of that.
+We have deluded our users, and ourselves, that applications are nothing more than a thin layer around our database.

@@ -1,0 +1,6 @@
+As much as possible, do not use {thing} at all.
+According to this comment, {thing} should never have been in the library in the first place.
+It seems that if Flux was introduced in conjunction with React initially, {thing} would not even exist.
+It seems that {thing} was used to allow react to function by itself without flux.
+If a React component must have side-effects, it must use Flux actions instead of having {thing}.
+Components ideally should have no {thing} at all.
