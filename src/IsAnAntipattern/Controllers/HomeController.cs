@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using App.Metrics;
 using App.Metrics.Counter;
+using IsAnAntipattern.Metrics;
 using Microsoft.AspNetCore.Mvc;
 using IsAnAntipattern.Models;
 using IsAnAntipattern.Services;
@@ -14,16 +15,10 @@ namespace IsAnAntipattern.Controllers
     [Route("")]
     public class HomeController : Controller
     {
-        private static readonly CounterOptions SubDomainCounter = new CounterOptions
-        {
-            Name = "sub_domain",
-            MeasurementUnit = Unit.Calls
-        };
-        
         private readonly IBlahBlahBlah _blah;
-        private readonly IMetrics _metrics;
+        private readonly ISiteMetrics _metrics;
 
-        public HomeController(IBlahBlahBlah blah, IMetrics metrics)
+        public HomeController(IBlahBlahBlah blah, ISiteMetrics metrics)
         {
             _blah = blah;
             _metrics = metrics;
@@ -33,8 +28,9 @@ namespace IsAnAntipattern.Controllers
         public IActionResult Index()
         {
             var subDomain = Request.Host.Host.Split('.').FirstOrDefault() ?? "Something";
-            var tags = new MetricTags("sub", subDomain);
-            _metrics.Measure.Counter.Increment(SubDomainCounter, tags);
+            
+            _metrics.SubDomainCount(subDomain);
+            _metrics.ReferrerCount(Request);
             
             var thing = SubDomainTitle(subDomain);
             var blah = _blah.GenerateParagraphs(thing, 4, 8, 4);
