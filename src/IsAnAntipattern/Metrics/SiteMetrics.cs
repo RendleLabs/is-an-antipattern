@@ -13,12 +13,14 @@ namespace IsAnAntipattern.Metrics
         {
             Name = "sub_domain",
             MeasurementUnit = Unit.Calls,
+            ResetOnReporting = true
         };
 
         private static readonly CounterOptions ReferrerCounter = new CounterOptions
         {
             Name = "referrer_count",
-            MeasurementUnit = Unit.Calls
+            MeasurementUnit = Unit.Calls,
+            ResetOnReporting = true
         };
 
         public SiteMetrics(IMetrics metrics)
