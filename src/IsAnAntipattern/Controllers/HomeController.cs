@@ -9,6 +9,7 @@ using IsAnAntipattern.Metrics;
 using Microsoft.AspNetCore.Mvc;
 using IsAnAntipattern.Models;
 using IsAnAntipattern.Services;
+using Microsoft.AspNetCore.Http.Extensions;
 
 namespace IsAnAntipattern.Controllers
 {
@@ -37,7 +38,9 @@ namespace IsAnAntipattern.Controllers
             
             var model = new BlahViewModel
             {
+                Url = $"https://{subDomain}.isanantipattern.com",
                 Title = $"{thing} Is An Anti-pattern",
+                Description = $"Bob Thoughtleader explains why people who like the {thing} pattern are wrong and not as good as him.",
                 HtmlText = blah.Text,
                 ImagePath = blah.ImagePath,
                 UnsplashLink = blah.UnsplashLink
