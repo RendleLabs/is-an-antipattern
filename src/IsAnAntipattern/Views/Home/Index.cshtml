@@ -37,7 +37,7 @@
         <link href="~/lib/mediumish/css/bootstrap.min.css" rel="stylesheet">
     </environment>
     <environment exclude="Development">
-        <link href="//static.isanantipattern.com/lib/mediumish/css/bootstrap.min.css" rel="stylesheet">
+        <link href="~/lib/mediumish/css/bootstrap.min.css" rel="stylesheet">
     </environment>
     <!-- Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -48,8 +48,8 @@
         <link href="~/css/site.css" rel="stylesheet">
     </environment>
     <environment exclude="Development">
-        <link href="//static.isanantipattern.com/lib/mediumish/css/mediumish.css" rel="stylesheet">
-        <link href="//static.isanantipattern.com/css/site.css" rel="stylesheet">
+        <link href="~/lib/mediumish/css/mediumish.css" rel="stylesheet">
+        <link href="~/css/site.css" rel="stylesheet">
     </environment>
 </head>
 <body>
@@ -67,7 +67,7 @@
                 <img src="~/lib/mediumish/assets/img/logo.png" alt="logo">
             </environment>
             <environment exclude="Development">
-                <img src="//static.isanantipattern.com/lib/mediumish/assets/img/logo.png" alt="logo">
+                <img src="~/lib/mediumish/assets/img/logo.png" alt="logo">
             </environment>
         </a>
         <!-- End Logo -->
@@ -175,7 +175,7 @@
                 <img class="featured-image img-fluid" src="~/images/unsplash/@Model.ImagePath" alt="Pretty picture">
             </environment>
             <environment exclude="Development">
-                <img class="featured-image img-fluid" src="//static.isanantipattern.com/images/unsplash/@Model.ImagePath" alt="Pretty picture">
+                <img class="featured-image img-fluid" src="~/images/unsplash/@Model.ImagePath" alt="Pretty picture">
             </environment>
             @Html.Raw(Model.UnsplashLink)
             <!-- End Featured Image -->
@@ -253,11 +253,11 @@
     <script src="~/lib/mediumish/js/mediumish.js"></script>
 </environment>
 <environment exclude="Development">
-    <script src="//static.isanantipattern.com/lib/mediumish/js/jquery.min.js"></script>
+    <script src="~/lib/mediumish/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="//static.isanantipattern.com/lib/mediumish/js/bootstrap.min.js"></script>
-    <script src="//static.isanantipattern.com/lib/mediumish/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="//static.isanantipattern.com/lib/mediumish/js/mediumish.js"></script>
+    <script src="~/lib/mediumish/js/bootstrap.min.js"></script>
+    <script src="~/lib/mediumish/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="~/lib/mediumish/js/mediumish.js"></script>
 </environment>
 </body>
 </html>
